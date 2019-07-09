@@ -1,0 +1,23 @@
+## kafka Producer
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      acks: all
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      batch-size: 1000
+
+    consumer:
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: SpringKafka
+---
+
+server:
+  port: 8096
+---
+kafka:
+  topic:
+    source-topic: source-topic
