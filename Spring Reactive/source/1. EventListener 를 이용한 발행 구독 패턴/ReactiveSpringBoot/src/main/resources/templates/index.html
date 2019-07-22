@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button type="button" onclick="action()">submit</button>
+    <ul id="events"></ul>
+
+<script type="application/javascript">
+    function add(message) {
+        var el = document.createElement("li");
+        el.innerHTML = message;
+        document.getElementById("events").appendChild(el);
+    }
+
+    function action() {
+        var eventSource = new EventSource("/temperature-stream");
+        eventSource.addEventListener("message", function (e) {
+            var t = JSON.parse(e.data);
+            var fixed = Number(t.value).toFixed(2);
+            add('Temperature : ' + fixed + ' C');
+        }, true);
+        eventSource.addEventListener("open", function (e) {
+            add('Connection opened');
+
+        }, true);
+        eventSource.addEventListener("error", function(e) {
+            add('Connection closed');
+        }, false);
+
+    /*    eventSource.onmessage = e => {
+            const t = JSON.parse(e.data);
+            const fixed = Number(t.value).toFixed(2);
+            add('Temperature : ' + fixed + ' C');
+        };
+        eventSource.onopen = e => add('Connection opened');
+        eventSource.onerror = e => add('Connection closed');*/
+    }
+</script>
+</body>
+</html>
