@@ -91,7 +91,8 @@ public class KafkaConfig {
 
     /**
      * Consumer Container factory
-     *ConcurrentKafkaListenerContainerFactory는
+     * ConcurrentKafkaListenerContainerFactory는
+     *
      * @return
      */
     @Bean

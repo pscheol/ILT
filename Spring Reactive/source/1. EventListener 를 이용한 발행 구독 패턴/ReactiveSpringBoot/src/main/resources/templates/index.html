@@ -5,8 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-    <button type="button" onclick="action()">submit</button>
-    <ul id="events"></ul>
+<button type="button" onclick="action()">submit</button>
+<ul id="events"></ul>
 
 <script type="application/javascript">
     function add(message) {
@@ -26,17 +26,17 @@
             add('Connection opened');
 
         }, true);
-        eventSource.addEventListener("error", function(e) {
+        eventSource.addEventListener("error", function (e) {
             add('Connection closed');
         }, false);
 
-    /*    eventSource.onmessage = e => {
-            const t = JSON.parse(e.data);
-            const fixed = Number(t.value).toFixed(2);
-            add('Temperature : ' + fixed + ' C');
-        };
-        eventSource.onopen = e => add('Connection opened');
-        eventSource.onerror = e => add('Connection closed');*/
+        /*    eventSource.onmessage = e => {
+                const t = JSON.parse(e.data);
+                const fixed = Number(t.value).toFixed(2);
+                add('Temperature : ' + fixed + ' C');
+            };
+            eventSource.onopen = e => add('Connection opened');
+            eventSource.onerror = e => add('Connection closed');*/
     }
 </script>
 </body>

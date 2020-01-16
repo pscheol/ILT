@@ -1,5 +1,5 @@
 apply plugin: 'java'
-apply plugin:'application'
+apply plugin: 'application'
 apply plugin: 'idea'
 
 group 'study'
@@ -28,13 +28,13 @@ dependencies {
 mainClassName = 'com.study.kafka.Main'
 jar {
     manifest {
-        attributes  'Title': 'My Application',  'Main-Class': mainClassName
+        attributes 'Title': 'My Application', 'Main-Class': mainClassName
     }
     archiveFileName = 'CheckNumber.jar'
     dependsOn configurations.runtime
     from {
-        configurations.compile.collect {it.isDirectory()? it: zipTree(it)}
-    }{
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    } {
         exclude "META-INF/*.SF"
         exclude "META-INF/*.DSA"
         exclude "META-INF/*.RSA"

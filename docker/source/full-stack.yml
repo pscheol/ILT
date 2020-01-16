@@ -8,9 +8,9 @@ services:
     ports:
       - "2181:2181"
     environment:
-        ZOO_MY_ID: 1
-        ZOO_PORT: 2181
-        ZOO_SERVERS: server.1=zoo1:2888:3888
+      ZOO_MY_ID: 1
+      ZOO_PORT: 2181
+      ZOO_SERVERS: server.1=zoo1:2888:3888
     volumes:
       - ./full-stack/zoo1/data:/data
       - ./full-stack/zoo1/datalog:/datalog
@@ -31,7 +31,7 @@ services:
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO"
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       JMX_PORT: 8999
-      KAFKA_DELETE_TOPIC_ENABLE: "true" 
+      KAFKA_DELETE_TOPIC_ENABLE: "true"
     volumes:
       - ./full-stack/kafka1/data:/var/lib/kafka/data
     depends_on:
@@ -118,7 +118,7 @@ services:
       CONNECT_INTERNAL_KEY_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
       CONNECT_INTERNAL_KEY_CONVERTER_SCHEMAS_ENABLE: "false"
       CONNECT_INTERNAL_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
-      CONNECT_INTERNAL_VALUE_CONVERTER_SCHEMAS_ENABLE: "false" 
+      CONNECT_INTERNAL_VALUE_CONVERTER_SCHEMAS_ENABLE: "false"
       CONNECT_REST_ADVERTISED_HOST_NAME: "kafka-connect"
       CONNECT_LOG4J_ROOT_LOGLEVEL: "INFO"
       CONNECT_LOG4J_LOGGERS: "org.apache.kafka.connect.runtime.rest=WARN,org.reflections=ERROR"
@@ -163,15 +163,15 @@ services:
   zoonavigator-web:
     image: elkozmon/zoonavigator-web:0.5.1
     ports:
-     - "8004:8000"
+      - "8004:8000"
     restart: on-failure
     environment:
       API_HOST: "zoonavigator-api"
       API_PORT: 9001
     links:
-     - zoonavigator-api
+      - zoonavigator-api
     depends_on:
-     - zoonavigator-api
+      - zoonavigator-api
 
   zoonavigator-api:
     image: elkozmon/zoonavigator-api:0.5.1
@@ -194,7 +194,7 @@ services:
       KAFKA_MANAGER_AUTH_ENABLED: "true"
       KAFKA_MANAGER_USERNAME: admin
       KAFKA_MANAGER_PASSWORD: admin123
-    depends_on:      
+    depends_on:
       - kafka1
       - zoo1
     command: -Dpidfile.path=/dev/null
