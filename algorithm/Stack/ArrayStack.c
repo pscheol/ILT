@@ -1,6 +1,3 @@
-//
-// Created by Paik Seung Cheol on 2017. 9. 9..
-//
 #include "ArrayStack.h"
 
 void createStack(Stack** stack, int capacity) {

@@ -1,7 +1,3 @@
-//
-// Created by Paik Seung Cheol on 2017. 9. 8..
-//
-
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 

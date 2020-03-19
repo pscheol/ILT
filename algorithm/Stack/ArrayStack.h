@@ -1,7 +1,3 @@
-//
-// Created by Paik Seung Cheol on 2017. 9. 9..
-//
-
 #ifndef ARRAYSTACK_H
 #define ARRAYSTACK_H
 
