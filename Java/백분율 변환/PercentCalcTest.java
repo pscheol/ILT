@@ -1,0 +1,21 @@
+import java.text.DecimalFormat;
+
+public class PercentCalcTest {
+    public static final String PERCENT_PATTERN = ".##";
+
+    /**
+     * 백분율로 변환
+     * @param total : Max Size
+     * @param range : idle or used size
+     * @param pattern
+     * @return
+     */
+    public static String parsePercent(double total, double range, String pattern) {
+        DecimalFormat df = new DecimalFormat(pattern);
+        return df.format((range * 100.0) / total);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("백분율 : " +  parsePercent(100000, 43500, PERCENT_PATTERN)+ "%");
+    }
+}
