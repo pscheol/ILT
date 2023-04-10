@@ -7,8 +7,11 @@ Tree(트리)
 #### 구성
 
 -	트리는 크게 Root(뿌리), Branch(가지),leaf(잎) 세 가지 요소로 이루어짐
+
 -	Root : 트리 구조에서 최상위에 존재하는 노드이다.
+
 -	Branch : Root Node or Sub Tree 와 leaf 사이에 있는 노드를 말한다(자식). 
+
 -	Leaf(Terminal Node) : Branch Node의 맨 끝에 달려있는 노드로, 밑으로 또 다른 노드가 연결되어 있지 않은 노드를 말한다(Terminal(단말)노드).
 
 -	Node : 트리의 구성요소에 해당하는 요소를 말한다.
