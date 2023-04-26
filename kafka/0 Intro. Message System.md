@@ -61,3 +61,8 @@ PTP모델과 차이점은 Receiver가 Topic에서 꺼내지 않고 모든 Receiv
   - consumption Layer(소비 계층) : 처리 계층에서의 처리 과정을 거친 데이터들이며, 처리된 데이터는 비지니스 의사 결정에 중요하고 정확한 정보를 가진다.
 
 이처럼 Streming Application은 Processing Layer에 위치하며 동일 데이터를 여러 Application에서 동시에 사용되거나 방법들을 제공한다. 그 중 Streming, Batch, Micro Batch 방식이 될 수도 있다.
+
+
+참조
+
+[아파치 카프카로 데이터 스트리밍 애플리케이션 제작](https://product.kyobobook.co.kr/detail/S000001804649)

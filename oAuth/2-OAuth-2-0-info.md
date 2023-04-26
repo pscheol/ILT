@@ -1,21 +1,3 @@
----
-title: 2. OAuth 2.0
-date: 2020-03-28 00:19:03
-tags: 
-- OAuth
-- OAuth2.0
-- Authentication
-- 인증
-- 보안
-categories: 
-- 'Computer'
-- 'Security'
-- 'Authentication'
-- 'OAuth'
----
-
-
-
 # OAuth 2.0
 
 OAuth 2.0은 OAuth 1.0의 단점을 개선한 것으로, OAuth 1.0은 웹 애플리케이션이 아닌 애플리케이션에서는 사용하기 곤란하다는 단점이 있다. 그리고 절차가 복잡하여 OAuth 구현 라이브러리를 제작하기 어렵고, 복잡한 절차 때문에 Service Provider에게도 연산 부담이 발생한다.
